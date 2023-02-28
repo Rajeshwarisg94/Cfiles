@@ -36,7 +36,7 @@ pipeline {
                 sh 'echo "this is testing stage"'
             }
         }
-        stage('deployable files saved'){
+        stage('deployable saved'){
             steps{
                 sh 'scp -v -o StrictHostKeyChecking=no /home/ubuntu/workspace/pipline/ABC.exe ubuntu@172.31.2.64:/home/ubuntu/cbuilds/ABC_$(date +%d_%m_%Y_%H_%M_%S).exe'
             }
