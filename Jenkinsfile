@@ -5,7 +5,7 @@ pipeline {
     stages{
         stage('get code') {
             steps{
-                git branch: 'main', url: 'https://github.com/ganeshmerwade/git_rep.git'
+                git branch: 'main', url: 'https://github.com/Rajeshwarisg94/Cfiles.git'
             }
         }
 
@@ -38,7 +38,7 @@ pipeline {
         }
         stage('save atrifact'){
             steps{
-                sh 'scp -v -o StrictHostKeyChecking=no ABC.exe ubuntu@172.31.12.87:/home/ubuntu/cbuilds/ABC_$(date +%d_%m_%Y_%H_%M_%S).exe'
+                sh 'scp -v -o StrictHostKeyChecking=no ABC.exe ubuntu@172.31.2.64:/home/ubuntu/cbuilds/ABC_$(date +%d_%m_%Y_%H_%M_%S).exe'
             }
         }
 
