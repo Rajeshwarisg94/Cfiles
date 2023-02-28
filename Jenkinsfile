@@ -1,6 +1,6 @@
 pipeline {
     agent {
-  label 'makec'
+  label 'c_agent'
     }
     stages{
         stage('get code') {
