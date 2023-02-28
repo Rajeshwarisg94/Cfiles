@@ -1,6 +1,6 @@
 pipeline {
     agent {
-  label 'c_agent'
+  label 'c_agent1'
     }
     stages{
         stage('get code') {
