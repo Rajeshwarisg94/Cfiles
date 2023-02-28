@@ -3,7 +3,7 @@ pipeline {
   label 'c_agent1'
     }
     stages{
-        stage('get code') {
+        stage('code') {
             steps{
                 git branch: 'main', url: 'https://github.com/Rajeshwarisg94/Cfiles.git'
             }
@@ -36,7 +36,7 @@ pipeline {
                 sh 'echo "this is testing stage"'
             }
         }
-        stage('save atrifact'){
+        stage('atrifactory'){
             steps{
                 sh 'scp -v -o StrictHostKeyChecking=no /home/ubuntu/workspace/pipline/ABC.exe ubuntu@172.31.2.64:/home/ubuntu/cbuilds/ABC_$(date +%d_%m_%Y_%H_%M_%S).exe'
             }
